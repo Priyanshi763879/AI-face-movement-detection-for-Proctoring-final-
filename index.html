@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uptoskills proctoring </title>
+    <style>
+        /* Style for the canvas */
+        #canvasContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        canvas {
+            border: 2px solid black;
+        }
+        #status {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 10px;
+            color: darkblue;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">AI Face Movement Detection for Proctoring (final)</h1>
+
+    <div id="canvasContainer">
+        <canvas id="outputCanvas" width="640" height="480"></canvas>
+    </div>
+
+    <p id="status">Loading...</p>
+    <audio id="beep" src="beep.mp3"></audio> <!-- Beep sound for error/alert -->
+
+    <!-- Include the Face Mesh library -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+    <!-- Include the external JavaScript file -->
+    <script src="faceDetection.js"></script>
+</body>
+</html>
